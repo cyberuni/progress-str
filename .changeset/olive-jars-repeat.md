@@ -29,3 +29,7 @@ Move back to a caret when 8.0.0 is stable.
 
 No source change was needed: `RecursivePartial`, `required` and `requiredDeep` are
 unchanged in 8.
+
+`assertron` moves 11.5.2 -> 11.6.0 in the lockfile as a side effect. 11.6.0 already
+declares `type-plus: ^8.0.0-beta.10`, so with both on 8 the tree resolves a single
+type-plus and a single tersify.
