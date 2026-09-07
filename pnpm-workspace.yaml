@@ -26,3 +26,45 @@ allowBuilds:
 # should carry its reason and the date it becomes removable.
 minimumReleaseAge: 1440 # 1 day
 minimumReleaseAgeStrict: true
+
+# First-party packages are exempt from the soak.
+#
+# The soak exists to stop a COMPROMISED THIRD-PARTY release being pulled into a build
+# within hours of publication. It does not describe our own packages: we control what
+# goes into them, and a first-party release is reviewed before it is published, not
+# after. Applying it to ourselves only means a fresh publish is invisible to the next
+# repo in the chain for 24h.
+#
+# That cost is real, not theoretical. It is what produced the type-plus duplication in
+# this repo: assertron@11.6.0 (type-plus ^8.0.0-beta.10, tersify ^4.0.6) was too young,
+# so pnpm silently resolved 11.5.2 instead and dragged in type-plus 7.6.2 and
+# tersify 3.12.1 alongside the 8.x this package now pins.
+minimumReleaseAgeExclude:
+  - assertron
+  - satisfier
+  - tersify
+  - unpartial
+  - type-plus
+  - path-equal
+  - iso-error
+  - iso-error-web
+  - iso-error-google-cloud-api
+  - standard-log
+  - standard-log-color
+  - async-fp
+  - fsa-emitter
+  - progress-str
+  - clibuilder
+  - args-minus
+  - global-store
+  - stable-store
+  - mocktomata
+  - just-func
+  - storybook-addon-vis
+  - vitest-plugin-vis
+  - node-supported-releases
+  - '@just-func/*'
+  - '@just-web/*'
+  - '@mocktomata/*'
+  - '@repobuddy/*'
+  - '@unional/*'
