@@ -68,3 +68,5 @@ minimumReleaseAgeExclude:
   - '@mocktomata/*'
   - '@repobuddy/*'
   - '@unional/*'
+  # Renovate security update: vitest@4.1.11
+  - vitest@4.1.11
