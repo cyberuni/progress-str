@@ -1,5 +1,11 @@
 # progress-str
 
+## 4.0.1
+
+### Patch Changes
+
+- dce6a70: Update `type-plus` to `8.0.0-beta.12`.
+
 ## 4.0.0
 
 ### Major Changes
