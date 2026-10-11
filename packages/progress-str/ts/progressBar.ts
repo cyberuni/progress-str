@@ -1,7 +1,7 @@
-import { type RecursivePartial, required, requiredDeep } from 'type-plus'
 import { defaultBaseOptions, defaultValueOptions } from './defaultOptions.js'
 import type { ProgressBar, ProgressBarOptions, ValueOptions } from './interfaces.js'
 import { renderBar } from './renderBar.js'
+import { type RecursivePartial, required, requiredDeep } from './required.js'
 import { createValueEntry } from './ValueEntry.js'
 import { validateBarFormat, validateLength, validateValueOptions } from './validate.js'
 
