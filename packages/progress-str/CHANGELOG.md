@@ -1,5 +1,11 @@
 # progress-str
 
+## 4.0.3
+
+### Patch Changes
+
+- ea4ccde: Include `CHANGELOG.md` in the published package.
+
 ## 4.0.2
 
 ### Patch Changes
